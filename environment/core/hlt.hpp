@@ -285,7 +285,7 @@ namespace hlt{
         }
 
         bool inBounds(Location l) const {
-            return l.x < map_width && l.y < map_height;
+            return !(l.x >= map_width && l.y >= map_height);
         }
         float getDistance(Location l1, Location l2) const {
             short dx = abs(l1.x - l2.x), dy = abs(l1.y - l2.y);
